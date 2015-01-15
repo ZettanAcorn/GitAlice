@@ -1,0 +1,13 @@
+/* ALL（共通） */
+.box{width: 200px; height: 200px; line-height: 200px; text-align: center; position: relative;}
+.bd div{background: #000; position:absolute;-webkit-transition:all 0.3s;transition:all 0.3s;}
+.bd div.bdR{height:100%; width :2px; right:0; top:0;}
+.bd div.bdL{height:100%; width :2px; left:0; bottom:0;}
+
+/*++++++++++ クラス切り替えでの実装 ++++++++++*/
+
+/* No.1 */
+.active .bd1 div.bdT{width: 0;}
+.active .bd1 div.bdB{width: 0;}
+.active .bd1 div.bdR{height:0;}
+.active .bd1 div.bdL{height:0;}

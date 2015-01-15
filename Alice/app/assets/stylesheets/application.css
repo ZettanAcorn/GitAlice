@@ -1,0 +1,211 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the top of the
+ * compiled file, but it's generally better to create a new file per style scope.
+ *
+ *= require_self
+ *= require_tree .
+*/
+
+@charset "utf-8";
+
+*{margin:0; padding:0px;}
+
+body { 
+	color: #400000;
+	background-color:#666;
+	background-image:image-url("haikei.gif");
+	background-position:top;
+	background-repeat: repeat-x;
+	background-color:#FFF;
+	height:100%;
+}
+
+h1{
+	color: #dfdfdf;
+	font-family:"Courier New", Courier, monospace;
+	font-size:30px;
+	border-width:0px;
+	border-bottom-style:solid;
+	
+}
+
+h2{
+	text-shadow:3px 3px 2px #CA9599;
+}
+
+h3{
+	margin-bottom:10px;
+	text-decoration:underline;
+	text-shadow:3px 3px 2px #CA9599;
+}
+h4{
+	padding:10px;
+	font-size:24px;
+	text-align:center;
+}
+
+hr.style-two {/*線のデザイン*/
+    border: 0;
+    height: 2px;
+    background-image: -webkit-linear-gradient(left, rgba(0,0,0,150), rgba(0,0,0,0.75), rgba(0,0,0,0)); 
+    background-image:    -moz-linear-gradient(left, rgba(0,0,0,150), rgba(0,0,0,0.75), rgba(0,0,0,0)); 
+    background-image:     -ms-linear-gradient(left, rgba(0,0,0,150), rgba(0,0,0,0.75), rgba(0,0,0,0)); 
+    background-image:      -o-linear-gradient(left, rgba(0,0,0,150), rgba(0,0,0,0.75), rgba(0,0,0,0)); 
+}
+
+/*↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓コンテナのスタイルシート↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓*/
+#container{
+	background-repeat:no-repeat;
+	background-image:image-url(main.png);
+	margin:0 auto;
+	width: 960px;
+	height: auto !important;  /* IE6対策：この2行で */
+    height: 100%;             /* IE6対策：擬似的にmin-heightと同じことをさせてる */
+    min-height: 100%;         /* 中身が少なくても高さ100%にする */
+    overflow:hidden;
+    border: 1px solid #ccc;
+
+}
+
+/*↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑コンテナのスタイルシート↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑*/
+
+
+
+
+/*↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓ヘッダーのスタイルシート↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓*/
+
+header{
+	width:960px;
+	text-align:right;
+	line-height:30px;
+	margin:0 auto;
+	margin-bottom: 100px;
+}
+
+.left_menuber{
+	float:left;
+	display: inline;
+	margin-bottom:20px;
+	clear: both;
+	height: auto;
+	width: 193px;
+}
+
+.menu_nav {
+	list-style-type:none;
+	text-align:center;
+	margin:5px 0 5px 0;
+}
+
+.menu_nav li{
+	color: #616161 ;
+	font-family:"Courier New", Courier, monospace;
+	font-size: 50px ;
+	border-width:1px;
+	display:block;
+	width:193px;
+	height:45px;
+	text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
+	overflow: hidden;
+}
+
+.menu_nav li a{
+	color: #03c;
+    -webkit-transition: 0.5s;
+    -moz-transition: 0.5s;
+    -o-transition: 0.5s;
+    -ms-transition: 0.5s;
+    transition: 0.5s;
+
+}
+
+.menu_nav li a hover{
+    color: #39f;
+}
+
+.menu_nav li a img{
+	border-style:none;
+}
+
+/*↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑ヘッダーのスタイルシート↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑*/
+
+
+
+/*↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓メインのスタイルシート↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓*/
+
+#content{
+	float: left;
+	height: 100%;
+	min-height: 700px;
+	width: 736px;
+	padding-bottom: 50px;
+}
+
+.job{
+	background:rgba(255,255,255,0.9);
+	background-image:image-url(company-back.png);
+	margin-left:-2px;
+	margin-bottom:10px;
+	float: left;
+	height: 230px;
+	width: 730px;
+	border: 1px solid #ebd6c7;
+    border-right: 1px solid #ebd6c7;
+    border-bottom: 1px solid #ebd6c7;
+      /* IE以外なら丸角も！ */
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+}
+/*↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑メインのスタイルシート↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑*/
+
+
+/*↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓サイドバーのスタイルシート↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓*/
+#sidebar {
+	background-color:#ebd6c7;
+	float: right;
+	width:195px;
+	height:100%;
+	min-height: 700px;
+	padding: 5px;
+}
+
+/*↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑サイドバーのスタイルシート↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑*/
+
+
+/*↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓フッターのスタイルシート↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓*/
+
+footer{
+	height:120px;
+ 	background-image:image-url(bottom.png);
+  	bottom: 0;                /* フッターが下に来るようにする */
+  	color: #fff;
+  	width: 100%;
+  	text-align: center;
+}
+
+/*↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑フッターのスタイルシート↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑*/
+
+
+.aaa{width: 720px; height: 200px; position: relative; padding: 5px; margin: 10px; background-color: #e4e4e4;}
+.bd div{background: #000; position:absolute;-webkit-transition:all 0.3s;transition:all 0.3s;}
+.bd div.bdT{width: 100%; height:2px; top:0; left:0;}
+.bd div.bdB{width: 100%; height:2px; bottom:0; right:0;}
+.bd div.bdR{height:100%; width :2px; right:0; top:0;}
+.bd div.bdL{height:100%; width :2px; left:0; bottom:0;}
+
+.aaa:hover .bd1 div.bdT{width: 0;}
+.aaa:hover .bd1 div.bdB{width: 0;}
+.aaa:hover .bd1 div.bdR{height:0;}
+.aaa:hover .bd1 div.bdL{height:0;}
+
+
+
+
+
