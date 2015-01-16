@@ -2,6 +2,10 @@ Rails.application.routes.draw do
 
   root to: "top#index"
   get "about" => "top#about" , as: "about"
+  resources :articles do
+    collection {get "search"}
+  end
+
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

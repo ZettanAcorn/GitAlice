@@ -1,0 +1,47 @@
+<div class="job" style="background-image:url(<%= asset_path "company-back.png" %>)">
+<% 5.times do |x| %>
+<p>お仕事情報だよ</p>
+<% end %>
+</div>
+
+<% if @articles.present? %>
+<% @articles.each do |article| %>
+<% if article.position == 1 then %>
+
+<h2><%= article.title %></h2>
+<hr class="style-two">
+<div class="aaa">
+<p><%= article.content %></p>
+
+<%= link_to "続きはこちらから", "#" %></p>
+	<div class="bd1 bd">
+		<div class="bdT"></div>
+		<div class="bdB"></div>
+		<div class="bdR"></div>
+		<div class="bdL"></div>
+	</div>
+</div>
+
+<% else %>
+
+<h2><%= article.title %></h2>
+<hr class="style-two">
+<div class="aaa">
+<p><%= article.content %></p>
+
+<%= link_to "続きはこちらから", "#" %></p>
+	<div class="bd1 bd">
+		<div class="bdT"></div>
+		<div class="bdB"></div>
+		<div class="bdR"></div>
+		<div class="bdL"></div>
+	</div>
+</div>
+
+<% end %>
+<% end %>
+
+<% else %>
+<p>記事がありません</p>
+<% end %>
+
