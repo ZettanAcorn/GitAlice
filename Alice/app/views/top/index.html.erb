@@ -1,18 +1,19 @@
 <div class="job" style="background-image:url(<%= asset_path "company-back.png" %>)">
-<% 5.times do |x| %>
-<p>お仕事情報だよ</p>
+<% @jobs.each do |job| %>
+<p><%= job.jobname %></p>
 <% end %>
 </div>
 
-<% 5.times do |x| %>
-<% if x == 0 then %>
+<% if @articles.present? %>
+<% @articles.each do |article| %>
+<% if article.position == 1 then %>
 
-<h2>Hot news</h2>
+<h2><%= article.title %></h2>
 <hr class="style-two">
 <div class="aaa">
-<p>ここに文章が入ります。ここに文章が入ります。ここに文章が入ります。ここに文章が入ります。ここに文章が入ります。ここに文章が入ります。ここに文章が入ります。ここに文章が入ります。ここに文章が入ります。ここに文章が入ります。</p>
+<p><%= article.content %></p>
 
-<%= link_to "続きはこちらから", "#" %></p>
+<%= link_to "続きはこちらから", article %></p>
 	<div class="bd1 bd">
 		<div class="bdT"></div>
 		<div class="bdB"></div>
@@ -23,10 +24,10 @@
 
 <% else %>
 
-<h2>見出し</h2>
+<h2><%= article.title %></h2>
 <hr class="style-two">
 <div class="aaa">
-<p>ここに文章が入ります。ここに文章が入ります。ここに文章が入ります。ここに文章が入ります。ここに文章が入ります。ここに文章が入ります。ここに文章が入ります。ここに文章が入ります。ここに文章が入ります。ここに文章が入ります。</p>
+<p><%= article.content %></p>
 
 <%= link_to "続きはこちらから", "#" %></p>
 	<div class="bd1 bd">
@@ -38,5 +39,9 @@
 </div>
 
 <% end %>
+<% end %>
+
+<% else %>
+<p>記事がありません</p>
 <% end %>
 

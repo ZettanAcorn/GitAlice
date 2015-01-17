@@ -2,9 +2,17 @@ Rails.application.routes.draw do
 
   root to: "top#index"
   get "about" => "top#about" , as: "about"
+  
+  resources :editors do
+  end
+
   resources :articles do
     collection {get "search"}
   end
+
+  resources :jobs do
+  end
+
 
 
   # The priority is based upon order of creation: first created -> highest priority.

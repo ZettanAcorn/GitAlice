@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150115232141) do
+ActiveRecord::Schema.define(version: 20150116164744) do
 
   create_table "articles", force: :cascade do |t|
     t.integer  "position",   limit: 4
@@ -19,6 +19,13 @@ ActiveRecord::Schema.define(version: 20150115232141) do
     t.text     "content",    limit: 65535
     t.datetime "created_at",               null: false
     t.datetime "updated_at",               null: false
+  end
+
+  create_table "jobs", force: :cascade do |t|
+    t.string   "jobname",    limit: 255
+    t.string   "date",       limit: 255
+    t.datetime "created_at",             null: false
+    t.datetime "updated_at",             null: false
   end
 
 end

@@ -1,0 +1,11 @@
+<% @page_title = @article.title %>
+
+<div class="job" style="background-image:url(<%= asset_path "company-back.png" %>)">
+<% @jobs.each do |job| %>
+<p><%= job.jobname %></p>
+<% end %>
+</div>
+
+<h1><%= @article.title %></h1>
+
+<p><%= @article.content %></p>

@@ -150,7 +150,7 @@ header{
 .job{
 	background:rgba(255,255,255,0.9);
 	background-image:image-url(company-back.png);
-	margin-left:-2px;
+	margin-left:10px;
 	margin-bottom:10px;
 	float: left;
 	height: 230px;

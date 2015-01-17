@@ -1,19 +1,21 @@
 <div class="job" style="background-image:url(<%= asset_path "company-back.png" %>)">
-<% @jobs.each do |job| %>
+<% @editor_jobs.each do |job| %>
 <p><%= job.jobname %></p>
 <% end %>
 </div>
 
-<% if @articles.present? %>
-<% @articles.each do |article| %>
-<% if article.position == 1 then %>
+<% if @editor_articles.present? %>
+<% @editor_articles.each do |editor_article| %>
+<% if editor_article.position == 1 then %>
 
-<h2><%= article.title %></h2>
+<h2><%= editor_article.title %></h2>
 <hr class="style-two">
 <div class="aaa">
-<p><%= article.content %></p>
+<p><%= editor_article.content %></p>
 
-<%= link_to "続きはこちらから", article %></p>
+<%= link_to "続きはこちらから", editor_article %></p>
+<p><%= link_to "編集", [:edit, editor_article ]%></p>
+<p><%= link_to "削除", editor_article, method: :delete, confirm: "本当に削除しますか？" %></p>
 	<div class="bd1 bd">
 		<div class="bdT"></div>
 		<div class="bdB"></div>
@@ -24,10 +26,10 @@
 
 <% else %>
 
-<h2><%= article.title %></h2>
+<h2><%= editor_article.title %></h2>
 <hr class="style-two">
 <div class="aaa">
-<p><%= article.content %></p>
+<p><%= editor_article.content %></p>
 
 <%= link_to "続きはこちらから", "#" %></p>
 	<div class="bd1 bd">
